@@ -5,10 +5,12 @@ import Projects from './pages/Projects'
 import Contacts from './pages/Contacts'
 import Project from './pages/Project'
 import { Route, Routes } from 'react-router-dom'
+import ScrollToTop from './utils/scrollToTop'
 
 function App() {
 	return (
 		<div className='App'>
+			<ScrollToTop />
 			<Navbar />
 
 			<Routes>
