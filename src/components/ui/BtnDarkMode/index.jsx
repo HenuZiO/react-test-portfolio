@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { useLocalStorage } from '../../../hooks/useLocalStorage'
 
 const BtnDarkMode = () => {
-	const [darkMode, setDarkMode] = useState('light')
+	const [darkMode, setDarkMode] = useLocalStorage('theme', 'light')
 	const themeBtnRef = useRef(null)
 
 	useEffect(() => {
