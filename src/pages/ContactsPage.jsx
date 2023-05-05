@@ -1,4 +1,4 @@
-const Contacts = () => {
+const ContactsPage = () => {
 	return (
 		<main className='section'>
 			<div className='container'>
@@ -27,4 +27,4 @@ const Contacts = () => {
 	)
 }
 
-export default Contacts
+export default ContactsPage

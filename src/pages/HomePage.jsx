@@ -1,6 +1,6 @@
 import Header from '../components/layouts/Header'
 
-const Home = () => {
+const HomePage = () => {
 	return (
 		<>
 			<Header />
@@ -25,4 +25,4 @@ const Home = () => {
 	)
 }
 
-export default Home
+export default HomePage

@@ -1,10 +1,11 @@
 import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Contacts from './pages/Contacts'
-import Project from './pages/Project'
-import { Route, Routes } from 'react-router-dom'
+import Home from './pages/HomePage'
+import ProjectsPage from './pages/ProjectsPage'
+import ContactsPage from './pages/ContactsPage'
+import ProjectPage from './pages/ProjectPage'
+import NotFoundPage from './pages/NotFoundPage'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import ScrollToTop from './utils/scrollToTop'
 
 function App() {
@@ -15,9 +16,11 @@ function App() {
 
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/contacts' element={<Contacts />} />
-				<Route path='/projects' element={<Projects />} />
-				<Route path='/project' element={<Project />} />
+				<Route path='/contacts' element={<ContactsPage />} />
+				<Route path='/projects' element={<ProjectsPage />} />
+				<Route path='/project/:id' element={<ProjectPage />} />
+				<Route path='/page-404' element={<NotFoundPage />} />
+				<Route path='*' element={<Navigate to='/page-404' />} />
 			</Routes>
 			<Footer />
 		</div>
