@@ -1,0 +1,14 @@
+.select-lang {
+  display: flex;
+  gap: 10px;
+  background-color: #383838;
+  color: #666;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.select-lang--active {
+  color: #ccc
+}
+
+
