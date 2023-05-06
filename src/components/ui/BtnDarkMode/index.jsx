@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { useLocalStorage } from '../../../hooks/useLocalStorage'
 import detectDarkMode from '../../../utils/detectDarkMode'
 
+import './BtnDarkMode.css'
+
 const BtnDarkMode = () => {
 	const [darkMode, setDarkMode] = useLocalStorage('theme', detectDarkMode())
 

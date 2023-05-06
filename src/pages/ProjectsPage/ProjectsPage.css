@@ -1,0 +1,31 @@
+/* Projects  */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.project {
+  max-width: 370px;
+
+  border-radius: 10px;
+  background-color: var(--project-card-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.project__img {
+  border-radius: 10px;
+}
+
+.project__title {
+  padding: 15px 20px 25px;
+
+  color: var(--project-card-text);
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}

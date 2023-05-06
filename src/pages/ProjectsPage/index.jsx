@@ -1,7 +1,7 @@
-import React from 'react'
+import './ProjectsPage.css'
 
-import ProjectItem from '../components/projectItem'
-import { projects } from '../helpers/projectsList'
+import ProjectItem from '../../components/projectItem'
+import { projects } from '../../helpers/projectsList'
 
 const ProjectsPage = () => {
 	return (
