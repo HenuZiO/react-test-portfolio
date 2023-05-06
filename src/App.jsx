@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navbar from './components/layouts/Navbar'
@@ -17,12 +17,11 @@ function App() {
 
 	const changeLanguage = lang => {
 		i18n.changeLanguage(lang)
-		console.log('Нажата кнопка смены языка')
 	}
 
 	return (
 		<div className='App'>
-			<LangContext.Provider value={{ t, changeLanguage }}>
+			<LangContext.Provider value={{ t, i18n, changeLanguage }}>
 				<ScrollToTop />
 				<Navbar />
 

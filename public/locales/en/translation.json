@@ -8,5 +8,8 @@
 	"GreetingsName": "Yuri",
 	"Profession": "a frontend developer",
 	"PS": "with passion for learning and creating.",
-	"CV": "Download CV"
+	"CV": "Download CV",
+	"Contacts": "Contacts",
+	"Location": "Location",
+	"CityCountry": "Moscow, Russia"
 }

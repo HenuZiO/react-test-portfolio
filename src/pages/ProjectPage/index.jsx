@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { LangContext } from '../../App'
 import { useParams } from 'react-router-dom'
 import { projects } from '../../helpers/projectsList'
 import BtnGithub from '../../components/ui/BtnGithub'
@@ -5,6 +7,7 @@ import BtnGithub from '../../components/ui/BtnGithub'
 import './ProjectPage.css'
 
 const ProjectPage = () => {
+	const { i18n } = useContext(LangContext)
 	const { id } = useParams()
 
 	const project = projects.find(el => el.src === id)
@@ -13,7 +16,9 @@ const ProjectPage = () => {
 		<main className='section'>
 			<div className='container'>
 				<div className='project-details'>
-					<h1 className='title-1'>{project.title}</h1>
+					<h1 className='title-1'>
+						{i18n.language === 'ru' ? project.title.ru : project.title.en}
+					</h1>
 
 					<img src={project.imgBig} alt='' className='project-details__cover' />
 
