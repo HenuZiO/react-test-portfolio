@@ -1,28 +1,37 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { useLocalStorage } from '../../../hooks/useLocalStorage'
+import detectDarkMode from '../../../utils/detectDarkMode'
 
 const BtnDarkMode = () => {
-	const [darkMode, setDarkMode] = useLocalStorage('theme', 'light')
-	const themeBtnRef = useRef(null)
+	const [darkMode, setDarkMode] = useLocalStorage('theme', detectDarkMode())
 
 	useEffect(() => {
 		if (darkMode === 'dark') {
 			document.body.classList.add('dark')
-			themeBtnRef.current.classList.add('dark-mode-btn--active')
 		} else {
 			document.body.classList.remove('dark')
-			themeBtnRef.current.classList.remove('dark-mode-btn--active')
 		}
 	}, [darkMode])
+
+	useEffect(() => {
+		window
+			.matchMedia('(prefers-color-scheme: dark)')
+			.addEventListener('change', event => {
+				const newColorScheme = event.matches ? 'dark' : 'light'
+				setDarkMode(newColorScheme)
+			})
+	}, [setDarkMode])
 
 	const toggleDarkMode = () => {
 		setDarkMode(currentMode => (currentMode === 'light' ? 'dark' : 'light'))
 	}
 
+	const themeBtnLight = 'dark-mode-btn'
+	const themeBtnDark = 'dark-mode-btn dark-mode-btn--active'
+
 	return (
 		<button
-			ref={themeBtnRef}
-			className='dark-mode-btn'
+			className={darkMode === 'dark' ? themeBtnDark : themeBtnLight}
 			onClick={toggleDarkMode}
 		>
 			<img
