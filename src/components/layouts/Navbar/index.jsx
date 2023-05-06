@@ -1,9 +1,12 @@
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { LangContext } from '../../../App'
 import BtnDarkMode from '../../ui/BtnDarkMode'
 import BtnSelectLang from '../../ui/BtnSelectLang'
 import './Navbar.css'
 
 const Navbar = () => {
+	const { t } = useContext(LangContext)
 	const activeLink = 'nav-list__link nav-list__link--active'
 	const normalLink = 'nav-list__link'
 	const setActiveLink = ({ isActive }) => (isActive ? activeLink : normalLink)
@@ -13,7 +16,7 @@ const Navbar = () => {
 			<div className='container'>
 				<div className='nav-row'>
 					<NavLink to='/' className='logo'>
-						<strong>Freelancer</strong> portfolio
+						<strong>{t('Freelancer')}</strong> {t('Portfolio')}
 					</NavLink>
 
 					<BtnDarkMode />
@@ -22,17 +25,17 @@ const Navbar = () => {
 					<ul className='nav-list'>
 						<li className='nav-list__item'>
 							<NavLink to='/' className={setActiveLink}>
-								Home
+								{t('HomeLink')}
 							</NavLink>
 						</li>
 						<li className='nav-list__item'>
 							<NavLink to='/projects' className={setActiveLink}>
-								Projects
+								{t('ProjectsLink')}
 							</NavLink>
 						</li>
 						<li className='nav-list__item'>
 							<NavLink to='/contacts' className={setActiveLink}>
-								Contacts
+								{t('ContactsLink')}
 							</NavLink>
 						</li>
 					</ul>

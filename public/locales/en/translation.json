@@ -1,3 +1,12 @@
 {
-	"text": "some text"
+	"Freelancer": "Freelance",
+	"Portfolio": "portfolio",
+	"ProjectsLink": "Projects",
+	"ContactsLink": "Contacts",
+	"HomeLink": "Home",
+	"Greetings": "Hi, my name is",
+	"GreetingsName": "Yuri",
+	"Profession": "a frontend developer",
+	"PS": "with passion for learning and creating.",
+	"CV": "Download CV"
 }

@@ -1,20 +1,25 @@
-import './Header.css'
+import { useContext } from 'react'
+import { LangContext } from '../../../App'
 
+import './Header.css'
 const Header = () => {
+	const { t } = useContext(LangContext)
+
 	return (
 		<header className='header'>
 			<div className='header__wrapper'>
 				<h1 className='header__title'>
 					<strong>
-						Hi, my name is <em>Yuri</em>
+						{t('Greetings')} <em>{t('GreetingsName')}</em>
 					</strong>
-					<br />a frontend developer
+					<br />
+					{t('Profession')}
 				</h1>
 				<div className='header__text'>
-					<p>with passion for learning and creating.</p>
+					<p>{t('PS')}</p>
 				</div>
 				<a href='#!' className='btn'>
-					Download CV
+					{t('CV')}
 				</a>
 			</div>
 		</header>

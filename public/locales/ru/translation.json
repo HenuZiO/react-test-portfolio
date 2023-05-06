@@ -1,3 +1,12 @@
 {
-	"text": "Какой-то текст"
+	"Freelancer": "Портфолио",
+	"Portfolio": "фрилансера",
+	"ProjectsLink": "Проекты",
+	"ContactsLink": "Контакты",
+	"HomeLink": "Главная",
+	"Greetings": "Привет, меня зовут",
+	"GreetingsName": "Юрий",
+	"Profession": "frontend-разработчик",
+	"PS": "со страстью к обучению и творчеству",
+	"CV": "Скачать резюме"
 }
